@@ -1,0 +1,290 @@
+.navigation {
+  width: 100%;
+  flex-grow: 1;
+  @media(min-width: 1200px) {
+    width: auto;
+  }
+  &--header {
+    background: $light-color;
+    position: absolute;
+    left: 100%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    top: 70px;
+    transition: .4s ease;
+    @media(min-width: 1200px) {
+      background: transparent;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      top: 0px;
+      left: 0;
+      position: relative;
+    }
+  }
+  &--open {
+    left: 0;
+  }
+
+  &__link {
+    @extend %font-19;
+    line-height: .86;
+    color: $main-color;
+    font-family: $normal-font;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: .4s ease;
+    position: relative;
+    display: inline-block;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: $accent-color;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transform-origin: center;
+      transform: scaleX(0);
+      transition: .4s ease;
+      @media(min-width: 1200px) {
+        bottom: vw(-14);
+      }
+    }
+    @media(max-width: 1400px) {
+      font-size: 15px;
+    }
+    @media(max-width: 1600px) {
+      font-size: 16px;
+    }
+    &:hover {
+      @media(min-width: 1200px) {
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+    }
+    &--link {
+      @media(max-width: 1600px) {
+        font-size: 18px
+      }
+      @media(max-width: 1400px) {
+        font-size: 16px
+      }
+    }
+  }
+  &__list {
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+    padding-top: 15px;
+    @media(min-width: 1200px) {
+      padding-top: 0px;
+      width: auto;
+      text-align: left;
+      justify-content: center;
+      margin-left: 7px;
+    }
+    @media(min-width: 1440px) {
+      margin-left: vw(15);
+    }
+    ul {
+      display: none;
+      z-index: 100;
+      background: $light-color;
+      top: 100%;
+      left: 50%;
+      overflow: auto;
+      border-radius: 5px;
+      width: 100%;
+      padding: 5px 0 0;
+      @media(min-width: 767px) {
+        padding: vw(35) 0 0;
+        box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.16);
+        transform: translateX(-50%);
+        position: absolute;
+        min-width: 750px;
+        width: vw(850);
+      }
+      @media(min-width: 1200px) {
+        border-radius: vw(10);
+        box-shadow: 0px 30px 30px #00000029;
+        transform: translateX(0);
+        left: vw(-150);
+      }
+      @media(min-width: 1600px) {
+        left: vw(-15);
+      }
+      li {
+        display: block;
+        margin: 0;
+        padding: 4px 0;
+        @media(min-width: 1200px) {
+          padding: vw(2) 0;
+          margin: 0 vw(25) vw(13) vw(25);
+        }
+      }
+    }
+    li:hover > ul {
+      display: block;
+      @media(min-width: 767px) {
+        display: flex;
+      }
+    }
+  }
+  &__services, &__bussines {
+    width: 100%;
+    margin-bottom: 0 !important;
+    a {
+      @media(min-width: 1200px) {
+        &:after {
+          display: none;
+        }
+      }
+    }
+    &:hover {
+      .sub-menu {
+        display: flex;
+      }
+
+    }
+    .sub-menu {
+      border-radius: 0;
+      box-shadow: none;
+      position: static;
+      width: auto;
+      min-width: 0;
+      flex-direction: column;
+      transform: translateX(0%);
+      height: 170px;
+      display: none;
+      margin-top: 5px;
+      padding: 5px 0;
+      background: $gray-color;
+      @media(min-width: 767px) {
+        background: $light-color;
+        display: flex;
+      }
+      @media(min-width: 1200px) {
+        padding: vw(25) 0 vw(15);
+        flex-wrap: wrap;
+        height: 320px;
+      }
+      @media(min-width: 1600px) {
+        height: vw(350);
+        min-height: 350px;
+      }
+      li {
+        width:  auto;
+        padding-left: 0;
+        margin: 0 0 3px 0;
+        line-height: 1;
+        @media(min-width: 1200px) {
+          line-height: 1.3;
+        }
+        @media(min-width: 1600px) {
+          margin: 0 0 vw(6) 0;
+        }
+      }
+      a {
+        @extend %font-14;
+        font-weight: 700;
+      }
+    }
+  }
+  &__services {
+    @media(min-width: 1200px) {
+      width: 38%;
+    }
+  }
+  &__bussines {
+    @media(min-width: 1200px) {
+      width: 62%;
+    }
+  }
+  &__item {
+    padding: 6px 0;
+    position: relative;
+    margin: 0 12px 0 10px;
+    @media(min-width: 1440px) {
+      margin: 0 vw(45) 0 vw(10);
+    }
+    &.menu-item-has-children {
+      > a {
+        padding-right: 18px;
+        @media(min-width: 1440px) {
+          padding-right: vw(24);
+        }
+        &:after {
+          content: "";
+          width: vw(10);
+          min-width: 10px;
+          height: vw(5);
+          min-height: 5px;
+          background: url("../img/icons/arrow-down.svg") no-repeat center / 100%;
+          position: absolute;
+          right: 0;
+          top: 45%;
+        }
+        &:before {
+          display: none;
+        }
+      }
+    }
+    &--active {
+      a {
+        pointer-events: none;
+        color: $main-color;
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+    }
+    a {
+      @extend %font-16;
+      line-height: .86;
+      color: $main-color;
+      font-family: $normal-font;
+      font-weight: 400;
+      transition: .4s ease;
+      position: relative;
+      display: inline-block;
+      &:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $accent-color;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        transform-origin: center;
+        transform: scaleX(0);
+        transition: .4s ease;
+        @media(min-width: 1200px) {
+          bottom: vw(-7);
+        }
+      }
+      @media(max-width: 1600px) {
+        font-size: 15px;
+      }
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+      &--link {
+        @media(max-width: 1600px) {
+          font-size: 18px
+        }
+        @media(max-width: 1400px) {
+          font-size: 16px
+        }
+      }
+    }
+  }
+}
+
+.sub-menu {
+  padding-top: vw(25);
+  width: auto;
+  overflow: auto;
+}

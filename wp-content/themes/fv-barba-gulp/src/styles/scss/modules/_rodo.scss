@@ -1,0 +1,73 @@
+.rodo {
+  &__info {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @media(min-width: 1600px) {
+      padding-top: vw(50);
+      padding-bottom: vw(80);
+    }
+  }
+  &__title {
+    @extend %font-35;
+    font-family: $extra-font;
+    padding-bottom: 50px;
+    @media(min-width: 1200px) {
+      padding-bottom: vw(50);
+    }
+  }
+  &__content {
+    p {
+      @extend %font-16;
+      font-family: $normal-font;
+      line-height: 1.6;
+      font-weight: 300;
+      padding-bottom: 20px;
+      @media(min-width: 1200px) {
+        padding-bottom: vw(20);
+      }
+    }
+    strong {
+      @extend %font-20;
+      display: block;
+      color: $main-color;
+      font-weight: 700;
+      padding-bottom: 10px;
+      @media(min-width: 1200px) {
+        padding-bottom: vw(10);
+      }
+    }
+    em {
+      display: block;
+      font-style: normal;
+      padding: 10px 0;
+      @media(min-width: 1200px) {
+        padding: vw(10) 0;
+      }
+    }
+    ul {
+      margin-bottom: 30px;
+    }
+    li {
+      padding: 10px 20px;
+      position: relative;
+      @media(min-width: 1200px) {
+        padding: 10px vw(20);
+      }
+      strong, em {
+        padding-top: 0;
+      }
+    }
+    ul li {
+      &:before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: transparentize($main-color, .7);
+        top: 20px;
+        left: 0;
+        border-radius: 50%;
+      }
+    }
+  }
+}

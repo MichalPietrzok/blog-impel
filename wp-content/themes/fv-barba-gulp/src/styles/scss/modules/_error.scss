@@ -1,0 +1,21 @@
+.error {
+  &__wrap {
+    min-height: 70vh;
+  }
+  &__info {
+    text-align: center;
+    &-title {
+      @extend %font-50;
+      font-family: $extra-font;
+    }
+    &-text {
+      @extend %font-20;
+      font-family: $extra-font;
+      padding: 20px 0;
+    }
+    &-link {
+      @extend %font-15;
+      font-family: $extra-font;
+    }
+  }
+}

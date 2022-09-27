@@ -1,0 +1,21 @@
+// screen
+$browser-context: 16;
+$screen-width: 1920;
+$screen-height: 980;
+ 
+//colors
+$main-color: #040931;
+$additional-color: transparentize($main-color, .7);
+$dark-gray-color: #b3b4c0;
+$dark-gray-color-2: #9b9dab;
+$orange-color: #ff5f0b;
+$accent-color: #ed1c24;
+$light-color: #FFFFFF;
+$gray-color: #f1f1f5;
+$text-color: #040931;
+$link-color: #2889f2;
+ 
+ //fonts
+$normal-font: sofia-pro, sans-serif;
+$extra-font: poppins, sans-serif;
+

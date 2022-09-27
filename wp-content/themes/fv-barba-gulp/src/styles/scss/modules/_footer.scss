@@ -1,0 +1,109 @@
+.footer {
+  background: $gray-color;
+  padding: 50px 0;
+  position: relative;
+  z-index: 3;
+  @media(min-width: 1200px) {
+    padding: vw(50) 0;
+  }
+  &__left-text {
+    @extend %font-14;
+    color: $main-color;
+    @media(min-width: 767px) {
+      min-width: 230px;
+      width: vw(250);
+      margin-left: vw(78);
+    }
+  }
+  &__logo {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 15px;
+    @media(min-width: 992px) {
+      margin-bottom: 0;
+    }
+    @media(min-width: 1200px) {
+      width: vw(115);
+      min-width: 115px;
+      margin: 0;
+    }
+    &-image {
+      width: 100%;
+    }
+  }
+  &__panel {
+    margin-top: 20px;
+    @media(min-width: 1200px) {
+      margin-top: 0px;
+    }
+    &-button {
+      @extend .page-button;
+      background: $light-color;
+      width: vw(290);
+      min-width: 170px;
+      margin-left: vw(30);
+      margin-top: 20px;
+      @media(min-width: 767px) {
+        margin-top: 0px;
+      }
+      &__text {
+        @extend .page-button__text;
+        color: $main-color;
+      }
+      &__icon {
+        @extend .page-button__icon;
+        margin-left: 15px;
+      }
+    }
+    &-link {
+      min-width: 200px;
+      margin-bottom: 15px;
+      @media(min-width: 767px) {
+        margin-bottom: 0px;
+      }
+    }
+    &-link span {
+      @extend %font-12;
+      text-transform: uppercase;
+      line-height: 0.91;
+      color: $main-color;
+      font-family: $normal-font;
+      font-weight: 900;
+      display: inline-block;
+      margin: 10px 0;
+      @media(min-width: 767px) {
+        margin: 0 vw(30);
+      }
+    }
+     &-link span {
+      margin: 0;
+    }
+  }
+  &__final {
+    text-align: center;
+    padding: vw(45) 0 0;
+    &-text {
+      @extend %font-14;
+      color: $additional-color;
+      line-height: 1.64;
+      margin-left: 5px;
+      @media(min-width: 767px) {
+        margin-left: 0px;
+        min-width: 200px;
+        width: vw(200);
+      }
+    }
+    &-link {
+      @extend %font-12;
+      color: $additional-color;
+      display: inline-block;
+      margin: 10px 0;
+      margin-left: 5px;
+      @media(min-width: 767px) {
+        margin-left: 0px;
+        min-width: 200px;
+        width: vw(200);
+      }
+    }
+  }
+}

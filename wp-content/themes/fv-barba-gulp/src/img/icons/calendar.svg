@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Component_11_1" width="17.506" height="16.822" viewBox="0 0 17.506 16.822">
+    <defs>
+        <style>
+            .cls-1{fill:#040931}
+        </style>
+    </defs>
+    <g id="Rectangle_4" transform="translate(3.282 6.428)">
+        <path id="Rectangle_9" d="M0 0H3.009V3.009H0z" class="cls-1"/>
+    </g>
+    <g id="Rectangle_7" transform="translate(3.282 10.531)">
+        <path id="Rectangle_10" d="M0 0H3.009V3.009H0z" class="cls-1"/>
+    </g>
+    <g id="Rectangle_8" transform="translate(7.386 10.531)">
+        <path id="Rectangle_11" d="M0 0H3.009V3.009H0z" class="cls-1"/>
+    </g>
+    <g id="Rectangle_5" transform="translate(7.386 6.428)">
+        <path id="Rectangle_12" d="M0 0H3.009V3.009H0z" class="cls-1"/>
+    </g>
+    <g id="Rectangle_6" transform="translate(11.488 6.428)">
+        <path id="Rectangle_13" d="M0 0H3.009V3.009H0z" class="cls-1"/>
+    </g>
+    <g id="Group_7">
+        <path id="Path_3" d="M-299.859 160.9h4.65v-1.641h-4.65v-1.5h-1.641v4.924h1.641z" class="cls-1" transform="translate(305.466 -157.75)"/>
+        <path id="Path_4" d="M-300.135 159.254h-2.325v-1.5h-1.64v4.924h1.641V160.9h2.325v12.036h-14.224V160.9h.685v-1.641h-.684A1.643 1.643 0 0 0-316 160.9v12.036a1.643 1.643 0 0 0 1.641 1.641h14.224a1.643 1.643 0 0 0 1.641-1.641V160.9a1.643 1.643 0 0 0-1.641-1.646z" class="cls-1" transform="translate(316 -157.75)"/>
+    </g>
+</svg>

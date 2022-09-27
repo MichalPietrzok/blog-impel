@@ -1,0 +1,29 @@
+// file for changing standard Bootstrap classes
+.container--medium {
+  @media(min-width: 1200px) {
+    max-width: 90%;
+  }
+  @media(min-width: 1600px) {
+    max-width: 1500px;
+  }
+  @media(min-width: 1920px) {
+    max-width: 80%;
+  }
+}
+.container--big {
+  @media(min-width: 1200px) {
+    max-width: 93.75%;
+  }
+}
+.container--max {
+  @media(min-width: 1200px) {
+    max-width: 95.5%;
+  }
+}
+.container--text {
+  max-width: 894px;
+  @media(min-width: 1200px) {
+    max-width: 894px;
+    max-width: vw(894);
+  }
+}

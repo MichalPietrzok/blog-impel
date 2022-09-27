@@ -1,0 +1,66 @@
+body {
+  overflow-x: hidden;
+}
+
+body,
+a,
+p,
+button {
+  font-family: $normal-font;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $normal-font;
+  font-weight: 700;
+}
+
+strong {
+  font-weight: bold;
+}
+
+button,
+a,
+video {
+	outline: none;
+    &:focus {outline:none;}
+    &::-moz-focus-inner {border:0;}
+}
+
+.link-disabled {
+  pointer-events: none;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: $dark-gray-color transparent;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 10px;
+  } 
+  &::-webkit-scrollbar {
+    background-color: transparent; /* or add it to the track */
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1000px;
+    background:  $dark-gray-color;
+  }
+ }
+
+.scroll {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+.scroll--hidden {
+  opacity: 0;
+}
+
+.site {
+  opacity: 0;
+}

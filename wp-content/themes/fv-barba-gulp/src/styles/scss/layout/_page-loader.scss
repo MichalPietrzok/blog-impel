@@ -1,0 +1,11 @@
+.page-loader {
+  position: fixed;
+  background: $light-color;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  &__wrap {
+    width: 100vw;
+    height: 100vh;
+  }
+}

@@ -1,0 +1,14 @@
+.site-content {
+  min-height: 100vh;
+  padding-top: 80px;
+  @media(min-width: 1200px) {
+    padding-top: 135px;
+  }
+  @media(min-width: 1920px) {
+    padding-top: vw(135);
+  }
+
+  &--home {
+    background-color: $gray-color;
+  }
+}

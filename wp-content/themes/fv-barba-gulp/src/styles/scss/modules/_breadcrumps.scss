@@ -1,0 +1,33 @@
+.breadcrumps {
+  background: $gray-color;
+  padding: 20px 0 30px; 
+  &--post {
+    padding: 30px 0;
+  }
+  &--light {
+    background: $light-color;
+  }
+  &__link {
+    @extend %font-13;
+    font-weight: 400;
+    color: $main-color;
+    opacity: .5;
+    @media(max-width: 576px) {
+      font-size: 10px;
+    }
+    &--last {
+      opacity: 1;
+    }
+    &-symbol {
+      line-height: 1;
+      font-weight: 400;
+      padding: 0 4px;
+      @media(max-width: 576px) {
+        font-size: 7px;
+      }
+      @media(min-width: 992px) {
+        padding: 0 5px;
+      }
+    }
+  }
+}

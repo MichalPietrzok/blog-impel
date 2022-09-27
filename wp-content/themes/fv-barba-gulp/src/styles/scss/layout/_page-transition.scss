@@ -1,0 +1,18 @@
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  display: none;
+  border-radius: 12px;
+  opacity: 0;
+  z-index: 21;
+  @media(min-width: 1920px) {
+    border-radius: vw(12);
+  }
+  &__wrap {
+    flex-grow: 1;
+    background: linear-gradient(transparent 10%, transparentize($main-color, .5) 90%), linear-gradient(-90deg, transparent 10%, transparentize($main-color, .5) 90%) ;
+  }
+}

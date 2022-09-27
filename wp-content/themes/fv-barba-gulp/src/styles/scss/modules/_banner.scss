@@ -1,0 +1,53 @@
+.banner {
+  padding: 0 0 50px;
+  @media(min-width: 992px) {
+    padding: 0 0 vw(60);
+  }
+  &__right {
+    @media(min-width: 1600px) {
+    padding-left: vw(50);
+    }
+  }
+  &__social {
+    min-height: 350px;
+    height: 450px;
+    margin-bottom: 20px;
+    background: transparent;
+    @media(min-width: 992px) {
+      width: 100%;
+      height: 65%
+    }
+    @media(min-width: 1200px) {
+      height: calc(43% - 1.25vw);
+      width: 100%;
+      margin-bottom: 0px;
+    }
+    &-icons {
+      background: $light-color;
+      border-radius: 10px;
+      width: 100%;
+      margin-bottom: 20px;
+      @media(min-width: 1200px) {
+        margin-bottom: 0px;
+        width: 24%;
+      }
+      @media(min-width: 1920px) {
+        border-radius: vw(10);
+      }
+    }
+    &-link {
+      border-radius: 50%;
+      background: $gray-color;
+      width: vw(50);
+      min-width: 50px;
+      height: vw(50);
+      min-height: 50px;
+      margin: 12px;
+      @media(min-width: 1200px) {
+      }
+      @media(min-width: 1920px) {
+        margin: vw(13) 0;
+      }
+    }
+  }
+}

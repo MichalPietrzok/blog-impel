@@ -1,0 +1,97 @@
+.intro {
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 100vw;
+  min-height: 75vh;
+  &__bg {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    min-height: 100%;
+    width: 100vw;
+    @media(min-width: 992px) {
+      height: 90vh;
+    }
+  }
+  &__container  {
+    @media(min-width: 992px) {
+      min-height: 75vh;
+    }
+    &:after {
+      content: "";
+      background: linear-gradient(transparent 10%, transparentize($main-color, .5) 90%), linear-gradient(-90deg, transparent 10%, transparentize($main-color, .5) 90%) ;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @media(min-width: 992px) {
+        width: 100vw;
+        height: 75vh;
+      }
+    }
+  }
+  &__wrap {
+    @media(min-width: 992px) {
+      padding-bottom: vw(100);
+      min-height: 75vh;
+    }
+  }
+  &__tags {
+    @extend .postcard-tags;
+    position: static;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  &__tag {
+    @extend .postcard-tag;
+    &-text {
+      @extend .postcard-tag__text;
+    }
+    &--main {
+      @extend .postcard-tag--main;
+    }
+  }
+  &__content {
+    padding: 35px 15px;
+    @media(min-width: 1200px) {
+      padding: 0;
+    }
+  }
+  &__title {
+    color: $light-color;
+    line-height: 1.15;
+    font-family: $extra-font;
+    font-weight: 750;
+    padding: 30px 0;
+    font-size: 20px; 
+    @media(min-width: 576px) {
+      font-size: 32px; 
+    }
+    @media(min-width: 992px) {
+      font-size: vw(68);
+    }
+    @media(min-width: 1200px) {
+      padding: vw(31) 0 vw(51);
+      width: vw(893);
+      min-width: 893px;
+    }
+    @media(min-width: 1600px) {
+      width: vw(1100);
+      min-width: 1100px;
+    }
+  }
+  &__date {
+    &-icon {
+      @extend .postcard-date__icon;
+      filter: brightness(100);
+    }
+    &-text {
+      @extend .postcard-date__text;
+      color: $light-color;
+    }
+  }
+}

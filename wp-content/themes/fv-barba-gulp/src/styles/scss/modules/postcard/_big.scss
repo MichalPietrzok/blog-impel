@@ -1,0 +1,107 @@
+.postcard {
+  &--big { 
+    min-height: 350px;
+    @media(min-width:992px) {
+      height: 440px;
+    }
+    @media(min-width: 1200px) {
+      height: 96%;
+    }
+  }
+  &-wrap {
+    &--big {
+      flex-grow: 1;
+      @media(min-width: 1200px) {
+        min-height: 450px;
+      }
+      @media(min-width: 1600px) {
+        height: 100%;
+      }
+    }
+  }
+  &-info--big {
+    z-index:1;
+    height: 100%;
+    border-radius: 12px;
+    transition: .4s ease;
+    padding: 30px 0 0;
+    @media(min-width: 1200px) {
+      padding: vw(41) 0 0;
+      border-radius: vw(12);
+      width: 100%;
+    }
+  }
+  &-info__link--big {
+    padding-bottom: 15px;
+    @media(min-width: 1200px) {
+      padding-bottom: vw(30);
+    }
+  }
+  &-info__wrap--big {
+    padding: 0 20px 0px;
+    @media(min-width: 1200px) {
+      padding: vw(0) vw(20) 0 vw(40);
+    }
+  }
+  &-decore--big {
+    position: absolute;
+    z-index:0;
+    height: 100%;
+    &:after {
+      border-radius: 12px;
+    }
+    @media(min-width: 1200px) {
+      width: 100%;
+      position: absolute;
+    }
+  }
+  &-image--big {
+    border-radius:  12px;
+    @media(min-width: 1200px) {
+      border-radius: vw(12);
+    }
+  }
+  &-tags--big {
+    position: relative;
+    bottom: 0;
+    padding: 0 20px;
+    @media(min-width: 1200px) {
+      padding: vw(50) vw(20) vw(0) vw(40);
+    }
+  }
+  &-title--big {
+    color: $light-color;
+    font-size: 23px;
+    margin-top: 50px;
+    @media(min-width: 992px) {
+      font-size: 30px;
+      margin-top: 80px;
+    }
+    @media(min-width: 1400px) {
+      font-size: vw(43);
+    }
+    @media(min-width: 1600px) {
+      margin-top: vw(120);
+    }
+  }
+  &-text--big {
+    @extend %font-18;
+    color: $light-color;
+  }
+  &-date--big {
+    margin: 10px  0 0;
+    padding-bottom: 0;
+    @media(min-width: 1200px) {
+      margin: vw(15) 0 0;
+    }
+    .postcard-date__text {
+      margin: 0;
+      color: $light-color;
+    }
+  
+    .postcard-date__icon {
+      margin-bottom: 0;
+      filter: brightness(100);
+    }
+  }
+}

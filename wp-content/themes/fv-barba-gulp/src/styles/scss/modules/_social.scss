@@ -1,0 +1,33 @@
+.social {
+  width: 100%;
+  text-align: center;
+  @media(min-width: 992px) {
+    margin-left: 25px;
+    width: auto;
+    text-align: left;
+  }
+  @media(min-width: 1200px) {
+    margin-left: 0;
+  }
+  &--footer {
+    display: none;
+    @media(min-width: 1600px) {
+      display: flex;
+    }
+  }
+  &__item {
+    height: vw(17);
+    min-height: 17px;
+    margin: 0 15px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    @media(min-width: 1200px) {
+      margin: 0 0 0 vw(16);
+    }
+  }
+  &__icon {
+    display: inline-block;
+    height: 100%;
+  }
+}
