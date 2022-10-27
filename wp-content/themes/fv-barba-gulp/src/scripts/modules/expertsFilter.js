@@ -100,9 +100,9 @@ class ExpertsFilter {
     const animationLine = gsap.timeline()
       .to('.experts-filter__btns', { height: 0, duration: .15 })
       .to(document.querySelectorAll('.experts-filter__btns')[i], { height: 'auto', duration: .15 }, '<')
-      .add(() => {
-        $btn.classList.add('open')
-      }, '<')
+      .add(() => { $btn.classList.add('open') }, '<')
+    this.filter('wszyscy')
+    this.catBtns.forEach($subBtn => $subBtn.classList.remove('active'))
   }
 
   resetCategory() {
