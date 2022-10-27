@@ -13,7 +13,7 @@
           <span class="breadcrumps__link-symbol"> > </span>
           Blog
         </a>
-        <?php if($args['prev']['name']) : ?>
+        <?php if(isset($args['prev']) && $args['prev']['name']) : ?>
           <a href="<?= get_home_url() .'/'.$args['prev']['slug'] ?>" class="breadcrumps__link">
             <span class="breadcrumps__link-symbol"> > </span>
             <?= $args['prev']['name'] ?>
