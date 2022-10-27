@@ -3,7 +3,6 @@ class ExpertsFilter {
     this.experts = document.querySelectorAll(props.experts)
     this.wrap = document.querySelector(props.wrap)
     const linkParams = new URLSearchParams(location.search)
-    const filter = linkParams.get('filter')
 
     this.addFilterCategories('Usługi', pageState.cats[0])
     this.addFilterCategories('Segmenty rynku', pageState.cats[1])
@@ -16,7 +15,7 @@ class ExpertsFilter {
       this.filter('wszyscy')
     })
     this.btns.forEach($btn => {
-      if ($btn.dataset.srt === filter) {
+      if ($btn.dataset.srt === linkParams.get('filter')) {
         this.filter($btn.dataset.srt)
       }
       $btn.addEventListener('click', () => {
@@ -97,12 +96,13 @@ class ExpertsFilter {
   }
 
   changeCategory($btn, i) {
+    const currentTab = document.querySelectorAll('.experts-filter__btns')[i]
+    const currentBUtton = currentTab.querySelector('button')
     const animationLine = gsap.timeline()
       .to('.experts-filter__btns', { height: 0, duration: .15 })
-      .to(document.querySelectorAll('.experts-filter__btns')[i], { height: 'auto', duration: .15 }, '<')
-      .add(() => { $btn.classList.add('open') }, '<')
-    this.filter('wszyscy')
-    this.resetBtn.classList.add('active')
+      .to(currentTab, { height: 'auto', duration: .15 }, '<')
+      .add(() => { $btn.classList.add('open', 'active') }, '<')
+    this.filter(currentBUtton.dataset.srt)
     this.catBtns.forEach($subBtn => $subBtn.classList.remove('active'))
   }
 
