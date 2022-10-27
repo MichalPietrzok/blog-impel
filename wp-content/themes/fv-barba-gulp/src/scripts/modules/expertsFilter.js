@@ -102,6 +102,7 @@ class ExpertsFilter {
       .to(document.querySelectorAll('.experts-filter__btns')[i], { height: 'auto', duration: .15 }, '<')
       .add(() => { $btn.classList.add('open') }, '<')
     this.filter('wszyscy')
+    this.resetBtn.classList.add('active')
     this.catBtns.forEach($subBtn => $subBtn.classList.remove('active'))
   }
 
