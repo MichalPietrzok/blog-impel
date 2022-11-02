@@ -20,7 +20,13 @@
     .postcard-link {
       filter:  brightness(100%);
     }
-
+  }
+  &--similar {
+    .posts__item {
+      &:nth-of-type(4) {
+        display: none
+      }
+    }
   }
   &__title {
     @extend %font-21;
