@@ -77,6 +77,8 @@
     text-align: center;
     flex-grow: 1;
     padding-top: 15px;
+    max-height: 70vh;
+    overflow: auto;
     @media(min-width: 1200px) {
       padding-top: 0px;
       width: auto;

@@ -5,11 +5,18 @@ class Header {
     this.mainNavFirstItem = this.mainNav.querySelector('li')
     this.parentsItems = this.mainNav.querySelectorAll('.menu-item-has-children')
     this.emptyLinks = this.mainNav.querySelectorAll('a[href="#"]')
+    this.burger = document.querySelector('.header__button')
 
     this.emptyLinks.forEach(link => {
       link.addEventListener('click', (e) => { e.preventDefault() })
     })
 
+    this.burger.addEventListener('click', () => {
+      const subMenus = this.mainNav.querySelectorAll('.sub-menu')
+      const links = this.mainNav.querySelectorAll('a[href="#"]')
+      subMenus.forEach(menu => { menu.classList.remove('active') })
+      links.forEach(link => { link.classList.remove('active') })
+    })
     this.parentsItems.forEach(item => {
       item.addEventListener('click', (e) => {
         e.stopPropagation()
