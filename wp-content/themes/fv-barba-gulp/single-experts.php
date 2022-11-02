@@ -34,7 +34,7 @@
                 <img class="experts-single__photo d-block" src="<?= get_field('experts_photo')['sizes']['experts-big']?>"  alt="zdjęcie: <?= get_field('experts_name'); ?>">
               </picture>
               <?php if(get_field('experts_link') != '') : ?>
-                <a rel="nofollow" shref="<?= get_field('experts_link') ?>" target="_blank" class="experts-single__link">
+                <a rel="nofollow" href="<?= get_field('experts_link') ?>" target="_blank" class="experts-single__link">
                   <img class="experts-single__icon" src="<?= images()?>icons/experts-in.svg" alt="logotyp linkedin (in)">
                 </a>
               <?php endif; ?>
