@@ -155,7 +155,7 @@
       min-width: 0;
       flex-direction: column;
       transform: translateX(0%);
-      height: 170px;
+      height: auto;
       display: none;
       margin-top: 5px;
       padding: 5px 0;
@@ -266,9 +266,11 @@
       @media(max-width: 1600px) {
         font-size: 15px;
       }
-      &:hover {
-        &:before {
-          transform: scaleX(1);
+      @media(min-width: 1200px) {
+        &:hover {
+          &:before {
+            transform: scaleX(1);
+          }
         }
       }
       &--link {

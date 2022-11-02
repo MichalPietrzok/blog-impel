@@ -8,7 +8,7 @@
   <div class="container container--medium">
     <div class="row">
       <div class="col-12 d-flex">
-        <a href="https://impel.pl/" class="breadcrumps__link">Impel</a>
+        <a data-barba-prevent="self" href="https://impel.pl/" class="breadcrumps__link">Impel</a>
         <a href="<?= get_home_url()?>" class="breadcrumps__link">
           <span class="breadcrumps__link-symbol"> > </span>
           Blog
