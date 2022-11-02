@@ -7,6 +7,7 @@ get_header();
   <?php         
     $query_var = 'page';
     $paged = (get_query_var($query_var)) ? get_query_var($query_var) : 1;
+    get_template_part('template-parts/breadcrumps', null, [ 'current' => '', 'mod' => 'home' ]);
     get_template_part('template-parts/sorting', null, [
       'mod' => $paged > 1 ? 'light' : 'home'
     ]);

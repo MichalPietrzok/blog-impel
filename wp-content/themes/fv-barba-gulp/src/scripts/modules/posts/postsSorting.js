@@ -14,6 +14,7 @@ class PostsSorting {
     this.currentLink = []
     this.panelShow = false
 
+    this.markCheckedButtons(new URLSearchParams(location.search))
     this.reset.addEventListener('click', () => { this.panelReset(true) })
     this.showButton.addEventListener('click', () => { this.panelToggle() })
     this.sortButtons.forEach($btn => {
@@ -24,6 +25,23 @@ class PostsSorting {
         this.panelToggle()
       }
     })
+  }
+
+  markCheckedButtons(linkParams) {
+    if (!linkParams.get('inne')) {
+      const slug = document.querySelector('[data-barba-namespace]')
+      this.sortButtons.forEach($btn => {
+        if (slug.dataset.barbaNamespace === $btn.dataset.sortUrl) {
+          this.changeLink($btn)
+        }
+      })
+
+      return false
+    }
+    Array.from(this.sortButtons)
+      .filter($btn =>
+        linkParams.get('inne').split(' ').includes($btn.dataset.sortUrl))
+      .forEach($btn => this.changeLink($btn))
   }
 
   panelReset(hold = false) {
@@ -60,7 +78,7 @@ class PostsSorting {
     const mainCategory = this.currentLink.length ? this.currentLink[0] : ''
     const addCategories = `?inne=${this.currentLink.join('+')}`
     this.sortLink.href = `${this.sortUrl}/${mainCategory}${addCategories}`
-    this.changeLinkState(!mainCategory && !addCategories)
+    this.changeLinkState(!mainCategory && addCategories === '?inne=')
   }
 
   changeLinkState(val = true) {

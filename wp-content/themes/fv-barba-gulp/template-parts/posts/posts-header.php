@@ -4,7 +4,7 @@
       <div class="posts__title-wrap col-12 col-lg-12">
         <div>
           <?php
-            $current_categories = explode(' ',$_GET['inne']);
+            $current_categories = isset($_GET['inne']) ? explode(' ',$_GET['inne']) : [''];
             $all_categories = [];
             $selected_categories = [];
             $title_text = '';

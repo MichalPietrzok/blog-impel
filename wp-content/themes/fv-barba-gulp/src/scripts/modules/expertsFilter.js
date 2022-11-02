@@ -3,7 +3,6 @@ class ExpertsFilter {
     this.experts = document.querySelectorAll(props.experts)
     this.wrap = document.querySelector(props.wrap)
     const linkParams = new URLSearchParams(location.search)
-    const filter = linkParams.get('filter')
 
     this.addFilterCategories('Usługi', pageState.cats[0])
     this.addFilterCategories('Segmenty rynku', pageState.cats[1])
@@ -11,18 +10,15 @@ class ExpertsFilter {
     this.catBtns = document.querySelectorAll(props.catBtns)
     this.resetBtn = document.querySelector(props.reset)
 
-    this.resetBtn.addEventListener('click', () => {
-      this.resetCategory()
-      this.filter('wszyscy')
-    })
+    this.resetBtn.addEventListener('click', () => { this.resetCategory() })
+
     this.btns.forEach($btn => {
-      if ($btn.dataset.srt === filter) {
+      if ($btn.dataset.srt === linkParams.get('filter')) {
         this.filter($btn.dataset.srt)
       }
-      $btn.addEventListener('click', () => {
-        this.filter($btn.dataset.srt)
-      })
+      $btn.addEventListener('click', () => { this.filter($btn.dataset.srt) })
     })
+
     this.catBtns.forEach(($btn, i) => {
       $btn.addEventListener('click', () => {
         if ($btn.classList.contains('open')) {
@@ -32,16 +28,6 @@ class ExpertsFilter {
         this.changeCategory($btn, i)
       })
     })
-  }
-
-  locationChange(val) {
-    const linkParams = new URLSearchParams(location.search)
-    const newOrder = linkParams.get('order')
-    let order = ''
-    if (newOrder) {
-      order = `&order=${newOrder}`
-    }
-    barba.history.add(`?filter=${val}${order}`, 'replace')
   }
 
   filter(val) {
@@ -76,7 +62,9 @@ class ExpertsFilter {
       }
       $btn.classList[action]('active')
     })
-    this.locationChange(val)
+
+    barba.history.add(`?filter=${val}`, 'replace')
+
     const animationLine = gsap.timeline()
       .to('#error-alert', {
         opacity: expertCounter === 0 ? 1 : 0,
@@ -97,12 +85,14 @@ class ExpertsFilter {
   }
 
   changeCategory($btn, i) {
+    const currentTab = document.querySelectorAll('.experts-filter__btns')[i]
+
     const animationLine = gsap.timeline()
       .to('.experts-filter__btns', { height: 0, duration: .15 })
-      .to(document.querySelectorAll('.experts-filter__btns')[i], { height: 'auto', duration: .15 }, '<')
-      .add(() => {
-        $btn.classList.add('open')
-      }, '<')
+      .to(currentTab, { height: 'auto', duration: .15 }, '<')
+      .add(() => { $btn.classList.add('open', 'active') }, '<')
+    this.filter(currentTab.querySelector('button').dataset.srt)
+    this.catBtns.forEach($subBtn => $subBtn.classList.remove('active'))
   }
 
   resetCategory() {
@@ -114,5 +104,6 @@ class ExpertsFilter {
         this.catBtns.forEach($subBtn => $subBtn.classList.remove('open'))
       })
       .to('#error-alert', { opacity: 0, display: 'none' })
+    this.filter('wszyscy')
   }
 }

@@ -1,8 +1,5 @@
 <?php 
   global $wp;
-  $current_url = home_url(add_query_arg(array(), $wp->request));
-  $sort_elements = $args['sort_target'];
-  $pagination = isset($_GET['start']) ? '&start='.$_GET['start'] : '';
   $mod = 'default';
   if(isset($args['mod'])) {
     $mod = $args['mod'];

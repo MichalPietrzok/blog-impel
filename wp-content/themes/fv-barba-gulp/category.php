@@ -28,6 +28,7 @@ $current_category = strtolower($term->slug);
       )
     );
     $posts = new WP_Query($args);
+    get_template_part('template-parts/breadcrumps', null, [ 'current' => 'Kategorie' ]);
     get_template_part('template-parts/posts/posts', 'header');
     if (!empty($posts ->have_posts())) {
       get_template_part('template-parts/posts/posts', null, [

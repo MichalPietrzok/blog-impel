@@ -125,7 +125,6 @@
       }
     }
     li:hover > ul {
-      display: block;
       @media(min-width: 767px) {
         display: flex;
       }
@@ -143,7 +142,9 @@
     }
     &:hover {
       .sub-menu {
-        display: flex;
+        @media(min-width: 767px) {
+          display: flex;
+        }
       }
 
     }
@@ -228,6 +229,13 @@
         &:before {
           display: none;
         }
+        &.active {
+          @media(max-width: 767px) {
+            &:after {
+              transform: rotate(180deg);
+            }
+          }
+        }
       }
     }
     &--active {
@@ -289,4 +297,9 @@
   padding-top: vw(25);
   width: auto;
   overflow: auto;
+  &.active {
+    @media(max-width: 767px) {
+      display: block !important;
+    }
+  }
 }
