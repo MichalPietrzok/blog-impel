@@ -28,8 +28,10 @@
                   }
                 }
                 $current_url = get_queried_object()->slug;
-                if(get_queried_object()->slug === $key && count($current_categories) > 2) {
-                  $current_url = $other_categories[0];
+                if(get_queried_object()->slug === $key && count($current_categories) > 1) {
+                  if(count($other_categories) > 0) {
+                    $current_url = $other_categories[0];
+                  }
                 }
                 $current_link = $current_url.'/'.'?inne='.$current_params;
                 $selected_categories[] = [
