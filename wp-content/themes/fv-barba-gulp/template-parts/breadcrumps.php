@@ -8,7 +8,7 @@
   <div class="container container--<?= $mod !== 'home' ? 'medium' : 'big' ?>">
     <div class="row">
       <div class="col-12 d-flex">
-        <a href="https://impel.pl/" class="breadcrumps__link">Impel</a>
+        <a data-barba-prevent="self" href="https://impel.pl/" class="breadcrumps__link">Impel</a>
         <?php if($args['current'] !== '') : ?>
           <a href="<?= get_home_url()?>" class="breadcrumps__link">
             <span class="breadcrumps__link-symbol"> > </span>
