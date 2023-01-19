@@ -24,11 +24,6 @@ class Post extends Page {
       postOpen()
       postTagsPaint()
       let currentIndent = screen.height;
-      if (elts('.post-info__content a').length) {
-        elts('.post-info__content a').forEach(link => {
-          link.rel = `${link.rel} nofollow`
-        })
-      }
       const contentTop = getCoords(elt('.post-info__content')).top;
       const contentHeight = elt('.post-info__content').offsetHeight;
       const contentFinish = contentTop + contentHeight;
