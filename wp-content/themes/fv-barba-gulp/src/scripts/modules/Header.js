@@ -30,6 +30,7 @@ class Header {
     this.mainMenuItems.forEach(item => {
       const proxyItem = item.cloneNode(true)
       proxyItem.classList.add('d-xl-none')
+      proxyItem.dataset.barbaPrevent = 'all'
       this.mainNav.appendChild(proxyItem)
     })
   }
