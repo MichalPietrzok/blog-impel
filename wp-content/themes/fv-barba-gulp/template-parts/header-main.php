@@ -33,7 +33,7 @@
   <div class="header-main__container container container--medium"> 
     <div class="header-main__wrap row d-flex align-items-center justify-content-between">
       <div class="col-xl-3">
-        <a class="header-main__logo" href="<?= get_home_url() ?>">
+        <a data-barba-prevent="self" class="header-main__logo" href="https://impel.pl">
           <img class="header-main__img" src="<?= images() ?>main-logo.svg" alt="impel">
         </a>
       </div>

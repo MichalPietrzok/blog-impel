@@ -135,6 +135,9 @@
     @media(min-width: 1200px) {
       padding-top: vw(30);
     }
+    &--categories {
+      padding-top: 0;
+    }
     &-title {
       @extend %font-24;
       font-weight: 700;

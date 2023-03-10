@@ -21,6 +21,9 @@
     background: $light-color;
     padding-top: 14px;
     padding-bottom: 14px;
+    @media(min-width: 1200px) {
+      border-bottom: 2px solid $gray-color;
+    }
   }
   &__links {
     margin: 15px 0;

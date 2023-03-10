@@ -52,7 +52,7 @@
       <div class="header__wrapper d-flex align-items-center">
         <div class="header__container container container--medium">
           <div class="header__top row align-items-center align-items-xl-start align-items-xl-center justify-content-between">
-          <a class="header-main__logo" href="<?= get_home_url() ?>">
+          <a data-barba-prevent="self" class="header-main__logo" href="https://impel.pl">
             <img class="header-main__img d-block d-xl-none" src="<?= images() ?>main-logo.svg" alt="impel">
           </a>
             <nav id="main-nav" class="navigation navigation--header col-xl-9 d-flex flex-column-reverse  flex-xl-row align-items-xl-end align-items-xl-center justify-content-xl-between">

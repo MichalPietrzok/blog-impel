@@ -28,13 +28,29 @@ $current_category = strtolower($term->slug);
       )
     );
     $posts = new WP_Query($args);
+    get_template_part('template-parts/breadcrumps', null, [ 'current' => 'Kategorie' ]);
     get_template_part('template-parts/posts/posts', 'header');
-    get_template_part('template-parts/posts/posts', null, [
-      'posts' => $posts->posts,
-      'all_posts' => $posts,
-      'query_var' => $query_var,
-      'mod' => 'category'
-    ]);
+    if (!empty($posts ->have_posts())) {
+      get_template_part('template-parts/posts/posts', null, [
+        'posts' => $posts->posts,
+        'all_posts' => $posts,
+        'query_var' => $query_var,
+        'mod' => 'category'
+      ]);
+   } else { ?>
+    <section class="posts">
+      <div class="posts-container container container--medium">
+        <div id="news-wrap" class="posts-wrap row justify-content-center justify-content-lg-start">
+            <div class="posts__title-wrap col-12">
+              <h2 class="posts__title">Pracujemy nad artykułami w tym temacie. Skontaktuj się z redakcją bloga i daj znać, jakie treści Cię interesują.</h2>
+            </div>
+        </div>
+      </div>
+    </section>
+
+   <?php 
+   }
+
     wp_reset_postdata();
   ?>
 </div>

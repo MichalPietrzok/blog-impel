@@ -152,6 +152,7 @@
     width: 150px;
     height: 150px;
     margin-bottom: 15px;
+    object-fit: cover;
     @media(min-width: 992px) {
       margin-bottom: 0px;
       width: vw(167);

@@ -4,7 +4,7 @@
       <div class="posts__title-wrap col-12 col-lg-12">
         <div>
           <?php
-            $current_categories = explode(' ',$_GET['inne']);
+            $current_categories = isset($_GET['inne']) ? explode(' ',$_GET['inne']) : [''];
             $all_categories = [];
             $selected_categories = [];
             $title_text = '';
@@ -28,8 +28,10 @@
                   }
                 }
                 $current_url = get_queried_object()->slug;
-                if(get_queried_object()->slug === $key && count($current_categories) > 2) {
-                  $current_url = $other_categories[0];
+                if(get_queried_object()->slug === $key && count($current_categories) > 1) {
+                  if(count($other_categories) > 0) {
+                    $current_url = $other_categories[0];
+                  }
                 }
                 $current_link = $current_url.'/'.'?inne='.$current_params;
                 $selected_categories[] = [

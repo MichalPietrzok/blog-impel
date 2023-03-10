@@ -25,17 +25,17 @@
               </div>
               <nav id="footer-nav" class="navigation navigation--footer d-flex flex-xl-row flex-column justify-content-end align-items-xl-center"> 
                 <div class="footer__panel d-flex flex-column flex-md-row align-items-center"> 
-                  <a href="https://impel.pl/polityka-prywatnosci/" rel=“nofollow” target="_blank" class="footer__panel-link justify-content-center justify-content-md-start d-flex align-items-center">
+                  <a href="https://impel.pl/polityka-prywatnosci/" target="_blank" class="footer__panel-link justify-content-center justify-content-md-start d-flex align-items-center">
                     <span>Polityka prywatności</span>
-                    <img class="footer__panel-button__icon" src="<?= images()?>arrow-right.svg" alt="granatowa strzałka w prawo">
+                    <img class="footer__panel-button__icon" src="<?= images()?>arrow-right.svg" alt="czerwona strzałka w prawo">
                   </a>
-                  <a href="https://impel.pl/polityka-cookies/" rel=“nofollow” target="_blank" class="footer__panel-link justify-content-center justify-content-md-start d-flex align-items-center">
+                  <a href="https://impel.pl/polityka-cookies/" target="_blank" class="footer__panel-link justify-content-center justify-content-md-start d-flex align-items-center">
                     <span>Polityka cookies</span>
-                    <img class="footer__panel-button__icon" src="<?= images()?>arrow-right.svg" alt="granatowa strzałka w prawo">
+                    <img class="footer__panel-button__icon" src="<?= images()?>arrow-right.svg" alt="czerwona strzałka w prawo">
                   </a>
-                  <a href="https://impel.pl" rel=“nofollow” target="_blank" class="footer__panel-button d-flex align-items-center justify-content-between">
+                  <a href="https://impel.pl" target="_blank" class="footer__panel-button d-flex align-items-center justify-content-between">
                     <span class="footer__panel-button__text">www.impel.pl</span>
-                    <img class="footer__panel-button__icon" src="<?= images()?>arrow-right.svg" alt="granatowa strzałka w prawo">
+                    <img class="footer__panel-button__icon" src="<?= images()?>arrow-right.svg" alt="czerwona strzałka w prawo">
                   </a>
                 </div>
               </nav>
